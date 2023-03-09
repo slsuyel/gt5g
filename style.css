@@ -1,0 +1,9 @@
+*{
+    max-width: 576px;
+    background-color: aliceblue;
+    margin: auto;
+}
+
+img.d-block.w-100 {
+    height: 200px;
+}

@@ -54,5 +54,11 @@ section div p {
     color: rgb(51, 51, 51);
     line-height: 15px;
 }
-
-/* margin: 0;font-weight: 500;color: rgb(102, 102, 102); */
+.main-bg-absulate {
+    text-align: center!important;
+    background: red;
+    position: absolute;
+    width: 85%;
+    margin: 0px 0px 0px 30px;
+    top: 14%;
+}

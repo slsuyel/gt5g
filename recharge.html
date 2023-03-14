@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Recharge</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 5px;
+        }
+    </style>
+</head>
+
+<body class="border border-bottom-0">
+
+    <header class="header-text" style="background-color: #0036ca;margin-bottom: -16px;">
+        <p class="py-2 text-white">Recharge </p>
+    </header>
+
+    <main class="mx-3">
+        <div class="bg-white lh-1 mt-4 py-3 topp w-100 shadow">
+            <p class="ms-2">Current Balance</p>
+            <p class="fs-1 fw-bold py-1 text-center">৳100.00</p>
+        </div>
+        <div class="bg-white lh-1 mt-3 w-100 shadow">
+            <input id="inputField" type="text" class="border-primary py-3 w-100">
+        </div>
+
+
+    </main>
+    <section class="fw-bold mt-3 mx-3">
+        <div class="grid-container">
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳1100</p>
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳1200</p>
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳1300</p>
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳1400</p>
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳1500</p>
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳1600</p>
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳1700</p>
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳1800</p>
+            <p class="bg-white py-3 shadow text-center w-100" onclick="updateInputValue(this)">৳অন্যান্য</p>
+        </div>
+        <div class="bg-white border border-2 border-primary  mt-3 py-3 shadow w-100">
+
+            <div class="d-flex gap-2 ms-2 w-50">
+                <p>Pay Type</p> <img
+                    src="https://static.vecteezy.com/system/resources/previews/010/141/449/original/check-mark-icon-sign-symbol-design-free-png.png"
+                    alt="" style="width: 25px;">
+                <p>onepay</p>
+            </div>
+        </div>
+        <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white"
+            style="background-color: #0036ca;  width: 100%;">Recharge</button>
+
+        <p class="fw-light my-1 px-2">Minimum deposit: ৳1100. The order amount must be consistent with the actual
+            payment amount, and the voucher needs to be uploaded after the payment is completed. Please complete the
+            payment according to the correct prompt information. Please do not save the same payee for a second
+            transfer, otherwise it will not reach your account. The company is not responsible for any loss caused by
+            improper personal operation.</p>
+    </section>
+
+    <footer class="fixed-footer mt-4 pt-5">
+        <div class="text-center fixed-footer-bg border-top d-flex footer-row justify-content-between mt-3 pt-3 px-2"
+            style="position: fixed; bottom: 0; width: 100%;background: white;">
+            <div>
+                <img class="footer-img" src="img/home.png" alt="image1">
+                <p>Home</p>
+            </div>
+            <div>
+                <img class="footer-img" src="img/2ee.png" alt="image1">
+                <p>Earnings</p>
+            </div>
+            <div>
+                <img class="footer-img" src="img/5t.png" alt="image1">
+                <p>team</p>
+            </div>
+            <div>
+                <img class="footer-img" src="img/1ss.png" alt="image1">
+                <p>Share</p>
+            </div>
+            <div>
+                <img class="footer-img" src="img/4mm.png" alt="image1">
+                <p>account</p>
+            </div>
+
+
+        </div>
+    </footer>
+    <script>
+        function updateInputValue(p) {
+            document.querySelector("input[type='text']").value = p.innerText;
+            const allParagraphs = document.querySelectorAll(".grid-container > p");
+            for (const paragraph of allParagraphs) {
+                /*  paragraph.classList.toggle("bg-primary", paragraph === p);
+                      paragraph.classList.toggle("bg-white", paragraph !== p); */
+
+                if (paragraph === p) {
+                    p.classList.add("bg-primary");
+                    p.classList.remove("bg-white");
+                } else {
+                    paragraph.classList.add("bg-white");
+                    paragraph.classList.remove("bg-primary");
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
